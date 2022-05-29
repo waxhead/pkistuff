@@ -1,0 +1,28 @@
+@charset "UTF-8";
+.progress::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    bottom: 0;
+    background: #eee;
+    content: "";
+    z-index: -1;
+}
+
+.progress {
+    position:relative;
+    width:75px;
+    height:35px;
+    background:green;
+}
+
+.progress:after {
+    position: absolute;
+    content: attr(data-progress) '%';
+    width: 100%;
+    line-height: 35px;
+    text-align: center;
+    color: white;
+    text-shadow:1px 0 0 black, 0 1px 0 black, -1px 0 0 black, 0 -1px 0 black;
+}
